@@ -15,7 +15,7 @@ mapExercise = {
 
 
 listExercise = [
-# Pecho
+    #Pecho
     "Press banca, 4x12, Pecho",
     "Press inclinado con mancuernas, 3x12, Pecho",
     "Press martillo en banco inclinado con mancuernas, 3x12, Pecho",
@@ -26,8 +26,28 @@ listExercise = [
     "Dips en paralelas (pecho), 3x8, Pecho",
     "Press con barra agarre estrecho, 3x10, Pecho",
     "Aperturas en máquina, 3x12, Pecho",
+    "Cruce de poleas alto, 4x12, Pecho",
+    "Cruce de poleas bajo, 4x12, Pecho",
+    "Press con mancuernas en banco plano, 4x12, Pecho",
+    "Press con barra en máquina Smith, 4x10, Pecho",
+    "Press de pecho en máquina convergente, 3x12, Pecho",
+    "Press inclinado en máquina, 3x12, Pecho",
+    "Pec deck inverso, 3x12, Pecho",
+    "Press de agarre neutro con mancuernas, 4x10, Pecho",
+    "Press con cadena, 4x8, Pecho",
+    "Squeeze press con mancuernas, 3x10, Pecho",
+    "Press de banca con pausa, 4x6, Pecho",
+    "Floor press con barra, 3x8, Pecho",
+    "Pullover con mancuerna, 3x12, Pecho",
+    "Aperturas en banco declinado, 3x10, Pecho",
+    "Press con agarre inverso en polea, 4x12, Pecho",
+    "Dips asistidos en máquina, 4x8, Pecho",
+    "Flexiones con palmada, 3x6, Pecho",
+    "Push-up con agarre cerrado, 4x12, Pecho",
+    "Press con mancuerna en banco neutro, 3x12, Pecho",
+    "Aperturas con cable en banco inclinado, 4x10, Pecho",
 
-    # Pierna
+    #Pierna
     "Sentadilla, 4x10, Pierna",
     "Sentadilla sumo con pesa rusa, 4x10, Pierna",
     "Sentadilla split con mancuernas, 4x10, Pierna",
@@ -38,8 +58,27 @@ listExercise = [
     "Peso muerto rumano, 4x10, Pierna",
     "Curl femoral tumbado, 4x12, Pierna",
     "Extensión de cuádriceps en máquina, 4x12, Pierna",
+    "Zancadas con mancuernas, 4x12, Pierna",
+    "Hack squat, 4x10, Pierna",
+    "Prensa hack invertida, 4x12, Pierna",
+    "Peso muerto piernas rígidas, 4x10, Pierna",
+    "Elevación de talones de pie, 4x15, Pierna",
+    "Elevación de talones sentado, 4x15, Pierna",
+    "Puente de glúteos, 3x15, Pierna",
+    "Hip thrust con barra, 4x12, Pierna",
+    "Step-up con mancuernas, 3x12, Pierna",
+    "Sentadilla pistol (asistida), 3x8, Pierna",
+    "Buenos días con barra, 3x10, Pierna",
+    "Sissy squat, 3x12, Pierna",
+    "Extensión de cadera en máquina, 3x15, Pierna",
+    "Patada de glúteo en polea, 4x12, Pierna",
+    "Prensa a una pierna, 3x12, Pierna",
+    "Desplantes laterales, 3x12, Pierna",
+    "Sentadilla con banda elástica, 4x10, Pierna",
+    "Sentadilla frontal con barra, 4x8, Pierna",
+    "Zancada cruzada con mancuerna, 3x12, Pierna",
 
-    # Espalda
+    #Espalda
     "Remo supino con mancuernas, 4x10, Espalda",
     "Remo sentado con banda elástica, 4x10, Espalda",
     "Remo inclinado en banco con mancuernas (agarre prono), 4x10, Espalda",
@@ -50,6 +89,25 @@ listExercise = [
     "Dominadas pronas, 4x8, Espalda",
     "Pullover con mancuerna, 3x12, Espalda",
     "Jalón con agarre estrecho en polea, 4x12, Espalda",
+    "Remo T-bar, 4x10, Espalda",
+    "Remo con barra agarre supino, 4x10, Espalda",
+    "Dominadas supinas, 4x8, Espalda",
+    "Jalón tras nuca, 3x10, Espalda",
+    "Pulldown con cuerda, 4x12, Espalda",
+    "Remo con cable con mango en V, 4x10, Espalda",
+    "Pull-over en polea alta, 3x12, Espalda",
+    "Hiperextensiones, 3x15, Espalda",
+    "Remo a una mano con mancuerna, 3x12, Espalda",
+    "Face pull en polea, 4x12, Espalda",
+    "Remo Kroc, 3x8, Espalda",
+    "Jalón neutro en polea, 4x12, Espalda",
+    "Pull-up asistido, 4x8, Espalda",
+    "Remo con toalla en barra fija, 3x10, Espalda",
+    "Peso muerto sumo, 4x8, Espalda",
+    "Jalón con agarre inverso, 4x12, Espalda",
+    "Remo invertido en TRX, 3x12, Espalda",
+    "Remo con manillar ancho en polea, 4x12, Espalda",
+    "Dominadas con agarre mixto, 3x6, Espalda",
 
     # Bíceps
     "Curl con barra, 4x10, Bíceps",
@@ -62,8 +120,22 @@ listExercise = [
     "Curl en banco inclinado, 3x12, Bíceps",
     "Curl 21s con barra, 3 series, Bíceps",
     "Curl con cable en polea baja, 4x12, Bíceps",
-
-    # Tríceps
+    "Curl Zottman con mancuernas, 3x10, Bíceps",
+    "Curl spider en banco inclinado, 3x12, Bíceps",
+    "Curl con barra EZ, 4x10, Bíceps",
+    "Curl con mancuernas sentado, 3x12, Bíceps",
+    "Curl con máquina sentado, 4x10, Bíceps",
+    "21s con mancuerna, 3 series, Bíceps",
+    "Curl en polea con barra recta, 4x12, Bíceps",
+    "Curl concentrado con cable, 3x12, Bíceps",
+    "Curl inclinado en polea baja, 4x12, Bíceps",
+    "Curl inverso en polea baja, 4x10, Bíceps",
+    "Curl alterno con supinación, 3x10, Bíceps",
+    "Curl martillo en polea, 3x12, Bíceps",
+    "Curl tipo drag, 3x10, Bíceps",
+    "Curl en máquina predicador, 3x10, Bíceps",
+    
+    #Tríceps
     "Press de copa con mancuerna de pie, 4x10, Tríceps",
     "Patada de tríceps con banda elástica, 3x10, Tríceps",
     "Flexiones sobre los antebrazos, 4x10, Tríceps",
@@ -74,8 +146,24 @@ listExercise = [
     "Press cerrado en máquina Smith, 3x10, Tríceps",
     "Patada de tríceps con mancuerna, 3x12, Tríceps",
     "Extensión con barra V en polea, 4x10, Tríceps",
+    "Press inverso en banco plano, 3x8, Tríceps",
+    "Dips en paralelas (tríceps), 4x8, Tríceps",
+    "Extensión de tríceps con mancuerna a dos manos, 4x12, Tríceps",
+    "Press en banco con agarre estrecho, 4x8, Tríceps",
+    "Patada de tríceps en polea baja con barra recta, 4x12, Tríceps",
+    "Press de tríceps en máquina fija, 3x10, Tríceps",
+    "Fondos asistidos en máquina, 3x12, Tríceps",
+    "Extensión de tríceps en barra recta, 4x10, Tríceps",
+    "Press de tríceps declinado, 3x10, Tríceps",
+    "Dips con agarre mixto, 3x8, Tríceps",
+    "Extensión de tríceps con cable y barra corta, 4x12, Tríceps",
+    "Press francés con barra Z, 4x10, Tríceps",
+    "Patada inversa en polea, 3x12, Tríceps",
+    "Press de tríceps tumbado en banco, 3x10, Tríceps",
+    "Extensión con cuerda en polea alta, 4x12, Tríceps",
+    "Press de tríceps unilateral con mancuerna, 3x12, Tríceps",
 
-    # Hombro
+    #Hombro
     "Press militar con barra (agarre abierto), 4x10, Hombro",
     "Press de hombros sentado con mancuernas (agarre neutro), 4x10, Hombro",
     "Press Arnold con mancuernas, 4x10, Hombro",
@@ -85,7 +173,26 @@ listExercise = [
     "Remo al mentón con barra, 4x10, Hombro",
     "Elevaciones posteriores con mancuernas, 3x12, Hombro",
     "Face pull con banda elástica, 4x12, Hombro",
-    "Encogimientos de hombros con mancuernas, 4x12, Hombro",]
+    "Encogimientos de hombros con mancuernas, 4x12, Hombro",
+    "Press militar con mancuernas alterno, 4x10, Hombro",
+    "Elevaciones frontales con mancuernas en cable, 3x12, Hombro",
+    "Elevaciones laterales inclinado, 3x12, Hombro",
+    "Press tras nuca en máquina, 3x10, Hombro",
+    "Press de hombros en máquina Smith, 4x10, Hombro",
+    "Pájaros en peck-deck inverso, 3x12, Hombro",
+    "Remo al mentón con mancuernas, 4x10, Hombro",
+    "Elevaciones posteriores en cable, 4x12, Hombro",
+    "Press militar con barra Z, 4x8, Hombro",
+    "Elevaciones frontales alternas con mancuernas, 3x12, Hombro",
+    "Elevaciones laterales con cable en polea baja, 4x12, Hombro",
+    "Press Arnold inverso, 3x10, Hombro",
+    "Pájaros con mancuernas sentado, 3x12, Hombro",
+    "Encogimientos con barra, 4x15, Hombro",
+    "Press militar de pie con banda elástica, 4x10, Hombro",
+    "Elevaciones frontales con barra en banco inclinado, 3x10, Hombro",
+    "Elevaciones laterales en máquina, 4x10, Hombro"
+
+]
 
 def extractExercise():
     localMap = {k: [] for k in mapExercise}
