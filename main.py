@@ -1,5 +1,5 @@
 from dataExercise import extractExercise
-from planificador import quantityExercise
+from planificador import quantityExercise, setDay
 
 
 def trainingSettings():
@@ -11,13 +11,14 @@ def trainingSettings():
         time = int(input("¿Cuanto van a durar tus entrenos? (De 50 a 100 mins): "))
     return days, time
 
-def setTraining():
 
 
 def main():
     test= extractExercise()
     days, time= trainingSettings()
-    quantityExercise(days, time)
+    quantity = quantityExercise(days, time)
+    plan = setDay(days, quantity, time)
+    print(plan)
 
 if __name__ == "__main__":
     main()

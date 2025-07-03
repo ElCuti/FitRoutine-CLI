@@ -88,12 +88,17 @@ listExercise = [
     "Encogimientos de hombros con mancuernas, 4x12, Hombro",]
 
 def extractExercise():
+    localMap = {k: [] for k in mapExercise}
+
     for exercise in listExercise:
-        listPart = exercise.split(",")
+        # Separamos y eliminamos espacios extra
+        name, reps, muscle = [part.strip() for part in exercise.split(",")]
+
         info = dataExercise.copy()
-        info["name"] = listPart[0]
-        info["repetitions"] = listPart[1]
-        info["muscle"] = listPart[2]
-        mapExercise[listPart[2]].append(info)
-    return mapExercise
+        info["name"] = name
+        info["repetitions"] = reps
+        info["muscle"] = muscle
+
+        localMap[muscle].append(info)
+    return localMap
 
