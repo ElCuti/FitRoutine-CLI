@@ -20,13 +20,13 @@ def generateMusclesExercise(muscleGroup, muscleID, trainingDay):
     :param muscleID: Nombre del músculo en concreto
     :param trainingDay: Lista donde almacenamos el bruto del entrenamiento
     """
-    for _ in range(muscleGroup):
-        exercise = random.choice(mapExercise[muscleID])
-        nameExercise = exercise["name"]+ " " +exercise["repetitions"]
+    for _ in range(muscleGroup):                                            #Hacemos un bucle con la cantidad de ejercicios que queremos trabajar de ese grupo muscular
+        exercise = random.choice(mapExercise[muscleID])                     #Escogemos al azar un ejercicio de ese grupo de ejercicios
+        nameExercise = exercise["name"]+ " " +exercise["repetitions"]       #Creamos una variable con el nombre + repeticiones para simplificar la muestra al user
         while nameExercise in trainingDay["exercise"]:
-            exercise = random.choice(mapExercise[muscleID])
+            exercise = random.choice(mapExercise[muscleID])                 #Bucle para verificar que no se repite el ejercicio
             nameExercise = exercise["name"] + " " + exercise["repetitions"]
-        trainingDay["exercise"].append(nameExercise)
+        trainingDay["exercise"].append(nameExercise)                        #Agregamos el ejercicio a la rutina del día
 
 def quantityExercise(time):
     """
@@ -34,30 +34,33 @@ def quantityExercise(time):
     :param time: Tiempo de entrenamiento
     :return: Cantidad de ejercicios totales
     """
-    quantity = trunc(time/5)
+    quantity = trunc(time/5) #Calculamos la cantidad de ejercicios totales dividendo el tiempo de entreno entre 5 y truncándolo para evitar decimales
     return quantity
 
 def days2(quantity):
     """
-    Función para crear la rutina de X días, escogidos por el usuario
-    :param quantity:
-    :param time:
-    :return:
+    Función para crear la rutina de 2 días, escogidos por el usuario
+    :param quantity: Cantidad de ejercicios a realizar por el usuario
+    :return: Rutina de ejercicios (Los días que haya pedido), tiempo estimado (5 mins por ejercicio), músculo/s enfocado/s y cantidad de ejercicios
     """
-    #Primer día: Pecho, Espalda, Biceps y Triceps
-    trainingDay1 = copy.deepcopy(trainingDayScheme) 
-    trainingDay1["muscles"] = ["Pecho", "Espalda", "Bíceps", "Tríceps"]
-    trainingDay1["exercise"].append("Movilidad cuerpo")
-    trainingDay1["exercise"].append("Rutina general de estiramientos")
-    quantityDay1 = quantity-2 #30% Pecho, 30% Espalda, 20% Triceps, 20% Biceps
-    chest = trunc(quantityDay1*0.3)
-    back = trunc(quantityDay1*0.3)
-    Triceps = trunc(quantityDay1*0.2)
-    Biceps = trunc(quantityDay1*0.2)
-    trainingDay1["quantity"] = chest + back + Triceps + Biceps
-    trainingDay1["time"] = trainingDay1["quantity"]*5+10
 
-    generateMusclesExercise(chest, "Pecho", trainingDay1)
+    #¡TODAS LAS FUNCIONES "daysX" SE EJECUTAN CON EL MISMO PATRÓN, LA EXPLICACIÓN DE ESTA ES APLICABLE A TODAS!
+
+    #Primer día: Pecho, Espalda, Biceps y Triceps
+    trainingDay1 = copy.deepcopy(trainingDayScheme)                     #Hacemos un deepcopy del diccionario básico
+    trainingDay1["muscles"] = ["Pecho", "Espalda", "Bíceps", "Tríceps"] #Insertamos manualmente los músculos que vamos a trabajar
+    trainingDay1["exercise"].append("Movilidad cuerpo")                 # y también añadimos manualmente el calentamiento y estiramiento
+    trainingDay1["exercise"].append("Rutina general de estiramientos")
+    quantityDay1 = quantity-2                                           #La rutina se compone de: 30% Pecho, 30% Espalda, 20% Triceps, 20% Biceps
+    chest = trunc(quantityDay1*0.3)
+    back = trunc(quantityDay1*0.3)                                      #Mediante porcentajes asignamos la cantidad de ejercicios para cada músculo
+    Triceps = trunc(quantityDay1*0.2)                                   # asi independientemente del tiempo que quiera entrenar el usuario tendrá una
+    Biceps = trunc(quantityDay1*0.2)                                    # distribución equitativa de ejercicios y razonable al tiempo de entreno
+    trainingDay1["quantity"] = chest + back + Triceps + Biceps
+    trainingDay1["time"] = trainingDay1["quantity"]*5+10                #Para calcular la cantidad de ejercicios REAL que va a hacer el user sumamos los resultados anteriores
+                                                                        # y para calcular el tiempo multiplicamos por 5 y le sumamos +10 del calentamiento y estiramiento
+
+    generateMusclesExercise(chest, "Pecho", trainingDay1)      #Ejecutamos la función para generar los ejercicios por cada grupo muscular a trabajar
     generateMusclesExercise(back, "Espalda", trainingDay1)
     generateMusclesExercise(Triceps, "Tríceps", trainingDay1)
     generateMusclesExercise(Biceps, "Bíceps", trainingDay1)
@@ -83,7 +86,11 @@ def days2(quantity):
 
 
 def days3(quantity):
-
+    """
+    Función para crear la rutina de 3 días, escogidos por el usuario
+    :param quantity: Cantidad de ejercicios a realizar por el usuario
+    :return: Rutina de ejercicios (Los días que haya pedido), tiempo estimado (5 mins por ejercicio), músculo/s enfocado/s y cantidad de ejercicios
+    """
     #Primer día: Pecho en gran medida, Hombro y Triceps para terminar de activarlo
     trainingDay1 = copy.deepcopy(trainingDayScheme) 
     trainingDay1["muscles"] = ["Pecho", "Tríceps"]
@@ -131,6 +138,11 @@ def days3(quantity):
     return [trainingDay1, trainingDay2, trainingDay3]
 
 def days4(quantity):
+    """
+    Función para crear la rutina de 4 días, escogidos por el usuario
+    :param quantity: Cantidad de ejercicios a realizar por el usuario
+    :return: Rutina de ejercicios (Los días que haya pedido), tiempo estimado (5 mins por ejercicio), músculo/s enfocado/s y cantidad de ejercicios
+    """
     #Primer día: Torso completo 1/2
     trainingDay1 = copy.deepcopy(trainingDayScheme) 
     trainingDay1["muscles"] = ["Pecho", "Espalda", "Bíceps", "Tríceps"]
@@ -194,6 +206,11 @@ def days4(quantity):
     return [trainingDay1, trainingDay2, trainingDay3, trainingDay4]
 
 def days5(quantity):
+    """
+    Función para crear la rutina de 5 días, escogidos por el usuario
+    :param quantity: Cantidad de ejercicios a realizar por el usuario
+    :return: Rutina de ejercicios (Los días que haya pedido), tiempo estimado (5 mins por ejercicio), músculo/s enfocado/s y cantidad de ejercicios
+    """
     # Primer día: Pecho en gran medida, Hombro y Triceps para terminar de activarlo
     trainingDay1 = copy.deepcopy(trainingDayScheme) 
     trainingDay1["muscles"] = ["Pecho", "Tríceps"]
@@ -268,7 +285,13 @@ def days5(quantity):
 
     return [trainingDay1, trainingDay2, trainingDay3, trainingDay4, trainingDay5]
 
-def setDay(days, quantity, time):
+def setDay(days, quantity):
+    """
+    Función que escoge que función ejecutar dependiendo de los días que haya escogido el user
+    :param days: Dias que quiere entrenar el usuario
+    :param quantity: Cantidad de ejercicios que va a realizar
+    :return: Función con los días exactos que quiere entrenar
+    """
     if days == 2:
         return days2(quantity)
     elif days == 3:

@@ -195,10 +195,14 @@ listExercise = [
 ]
 
 def extractExercise():
+    """
+    Función para simplificar y tratar los datos base de ejercicios
+    :return: Un diccionario con todos los ejercicios catalogados por musculatura
+    """
     localMap = {k: [] for k in mapExercise}
 
     for exercise in listExercise:
-        # Separamos y eliminamos espacios extra
+        # Separamos y eliminamos espacios extra con strip() generados por .split(",")
         name, reps, muscle = [part.strip() for part in exercise.split(",")]
 
         info = dataExercise.copy()

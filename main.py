@@ -51,10 +51,10 @@ Numero de ejercicios realizados: {}
         count +=1
 
 def main():
-    test= extractExercise()
+    extractExercise()
     days, time= trainingSettings()
     quantity = quantityExercise(time)
-    plan = setDay(days, quantity, time)
+    plan = setDay(days, quantity)
     basicInfo(plan)
 
 if __name__ == "__main__":
