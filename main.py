@@ -35,10 +35,12 @@ def basicInfo(plan):
     """
     Función que printea al usuario el día de ejercicio y información relevante
     :param plan: Lista completa con todos los ejercicios en bruto
+    :return: lista completa de todos los entrenos
     """
+    trainComplete = []
     count = 1
     for day in plan:
-        print("""
+        completeDay =("""
 Rutina dia {}
 Músculos a trabajar: {}
 Calentamiento: {}
@@ -47,15 +49,44 @@ Estiramientos: {}
 Duración estimada del entrenamiento: {}
 Numero de ejercicios realizados: {}
         """.format(count, day["muscles"], day["exercise"][0], formatExercise(day["exercise"]), day["exercise"][1], day["time"], day["quantity"]))
+        print(completeDay)
         sleep(1)
         count +=1
+        trainComplete.append(completeDay)
+    return trainComplete
+
+def userOk():
+    """
+    Función para preguntarle al usuario si le gusta su rutina o quiere otra
+    :return: Decisión tomada por el user
+    """
+    while True:
+        decision = input("¿Te gusta esta rutina de ejercicio [S] o quieres que te genere otra [N]? (Si guardas esta se borrara otra que tengas guardada): ").upper().strip()
+        if decision == "S" or decision == "N":
+            return decision
+        print("Por favor, introduce o S o N")
+
+def writerExercise(trainComplete):
+    """
+    Función encargada de escribir en un documento txt la rutina
+    :param trainComplete: Lista de entrenamiento
+    """
+    text = "\n\n".join(trainComplete) #Transformamos la lista en str
+    with open("Rutina_Entreno.txt", "w", encoding="utf-8") as fichero: #abrimos un fichero de texto para escribir la rutina
+        fichero.write(text) #Escribimos la rutina
 
 def main():
-    extractExercise()
-    days, time= trainingSettings()
-    quantity = quantityExercise(time)
-    plan = setDay(days, quantity)
-    basicInfo(plan)
+    decision = ""
+    while decision != "S":
+        extractExercise()
+        days, time= trainingSettings()
+        quantity = quantityExercise(time)
+        plan = setDay(days, quantity)
+        trainComplete = basicInfo(plan)
+        decision = userOk()
+        if decision == "S":
+            input("Tu rutina ha sido guardada en Rutina_Entreno.txt, pulse cualquier boton para salir")
+            writerExercise(trainComplete)
 
 if __name__ == "__main__":
     main()
